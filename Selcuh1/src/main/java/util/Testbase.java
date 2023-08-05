@@ -14,12 +14,8 @@ public class Testbase {
 	public Testbase(WebDriver driver) {
 		this.driver = driver;
 		}
-	@FindBy(how=How.XPATH,using="//*[@id=\"foo_filter\"]") WebElement search;
 	
-	public void vaildate_by_search(String input) {
-		search.sendKeys(input);
-	};
-	
+
 	// title validate
 	public boolean valididator(String suppose) {
 		String actual = driver.getTitle();
@@ -41,7 +37,7 @@ public class Testbase {
 	}
 	public void Find_user_new_account(String recent) {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	//Locating element by link text and store in variable "Element"        		
+	//Locating element by text and store in variable "Element"        		
     WebElement TextFinder = driver.findElement(By.xpath("//*[contains(text(), '" + recent + "')]"));
 
     // Scrolling down the page till the element is found		
