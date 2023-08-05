@@ -1,0 +1,34 @@
+package step;
+
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.LoginPage;
+import util.BrowserFactory;
+import util.Testbase;
+
+public class LoginSetupStep {
+	WebDriver driver;
+	LoginPage PreTestConfig;
+	Testbase commons;;
+	@Given("user is on biling page")
+	
+	public void user_is_on_biling_page() {
+	    driver=BrowserFactory.init();
+		driver.get("https://www.techfios.com/billing/?ng=login/");
+	}
+
+	@When("I login  with my <username> and <password>")
+	public void i_login_with_my_username_and_password() {
+	   PreTestConfig.loginRun("demo@techfios.com", "abc123");
+	}
+
+	@Then("I land on the dashboard page")
+	public void i_land_on_the_dashboard_page() {
+commons.valididator("Dashboard -iBilling");
+	}
+
+
+}

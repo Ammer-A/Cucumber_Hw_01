@@ -1,0 +1,91 @@
+package step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.DashboardPage;
+import pages.NewAccountPage;
+
+public class Add_new_account_Test {
+	WebDriver driver;
+	String accountType,purpose,Startbalance,routNum,contact,contactnum,url;
+	NewAccountPage Account;
+	DashboardPage Dashboard;
+	
+	@Given("user clicks on the new account page")
+	public void user_clicks_on_the_new_account_page() {
+	    Dashboard=PageFactory.initElements(driver, DashboardPage.class);
+	    Dashboard.switchTo_NEW_ACCOUNT();
+	}
+	@Given("data")
+	public static  List<Map<String, String>> data(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String, String>> AccountCreation = dataTable.asMaps();
+		return AccountCreation;
+	}
+	@When("I enter the account name <name>")
+	public void i_enter_the_account_name_name(io.cucumber.datatable.DataTable dataTable, Map<String, String>[] AccountCreation) {
+		
+		for (Map<String, String> AccountField : AccountCreation) {
+			accountType=AccountField.get("name");
+			Account=PageFactory.initElements(driver,NewAccountPage.class);
+			Account.account_type(accountType);
+			
+			
+		}
+	}
+
+	@When("I enter the account purpose <purpose>")
+	public void i_enter_the_account_purpose_purpose() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter the starting balance <balance>")
+	public void i_enter_the_starting_balance_balance() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter the routing number <rout>")
+	public void i_enter_the_routing_number_rout() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter contact person<contact>")
+	public void i_enter_contact_person_contact() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter contact phone number<phonenumber>")
+	public void i_enter_contact_phone_number_phonenumber() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter refrencence url <url>")
+	public void i_enter_refrencence_url_url() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I click on save btn")
+	public void i_click_on_save_btn() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("I verify account creation status")
+	public void i_verify_account_creation_status() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

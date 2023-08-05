@@ -1,0 +1,30 @@
+package util;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.asserts.Assertion;
+
+public class Testbase {
+	WebDriver driver;
+	public Testbase(WebDriver driver) {
+		this.driver = driver;
+		}
+	public boolean valididator(String suppose) {
+		String actual = driver.getTitle();
+		String expect = suppose;
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(actual, expect, "wrong page");
+		return true;
+
+	}
+	
+	public boolean Messagevalididator(String suppose) {
+		WebElement actual = driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div[3]/div[1]"));
+		String expect = suppose;
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(actual.getText(), expect, "unable to validate");
+		return true;
+
+	}
+}

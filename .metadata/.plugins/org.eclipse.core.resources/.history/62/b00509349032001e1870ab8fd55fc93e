@@ -1,0 +1,32 @@
+package step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.NewAccountPage;
+
+public class Add_new_account_Test {
+	WebDriver driver;
+	
+	
+	static String accountType;
+	static String purpose;
+	static String Startbalance;
+	static  String routNum;
+	static String contact;
+	static String contactnum;
+	static String url;
+	NewAccountPage Account;
+	
+	
+	
+	
+
+}

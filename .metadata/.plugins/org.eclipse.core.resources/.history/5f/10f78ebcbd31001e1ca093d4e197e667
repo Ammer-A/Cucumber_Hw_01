@@ -1,0 +1,67 @@
+package step;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Add_new_account_Test {
+	@Given("user clicks on the new account page")
+	public void user_clicks_on_the_new_account_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter the account type <type>")
+	public void i_enter_the_account_type_type() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter the account purpose <purpose>")
+	public void i_enter_the_account_purpose_purpose() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter the starting balance <balance>")
+	public void i_enter_the_starting_balance_balance() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter the routing number <rout>")
+	public void i_enter_the_routing_number_rout() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter contact person<contacr>")
+	public void i_enter_contact_person_contacr() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter contact phone number<phonenumber>")
+	public void i_enter_contact_phone_number_phonenumber() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I enter refrencence url <url>")
+	public void i_enter_refrencence_url_url() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("I click on save btn")
+	public void i_click_on_save_btn() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("I verify account creation status")
+	public void i_verify_account_creation_status() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

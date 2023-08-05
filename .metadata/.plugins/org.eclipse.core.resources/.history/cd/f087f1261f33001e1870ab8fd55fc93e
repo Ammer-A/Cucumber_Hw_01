@@ -1,0 +1,83 @@
+package step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.datatable.CucumberDataTableException;
+import io.cucumber.java.DataTableType;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import pages.NewAccountPage;
+
+public class Add_new_account_Test {
+	WebDriver driver;
+	
+	
+	static String accountType;
+	static String purpose;
+	static String Startbalance;
+	static  String routNum;
+	static String contact;
+	static String contactnum;
+	static String url;
+	NewAccountPage Account;
+	@DataTableType
+
+	
+	@When("User enters venus in the {string} field in accounts page")
+	public void user_enters_venus_in_the_field_in_accounts_page(String string) {
+	    Account.account_type(string);;
+	}
+
+	@When("User enters trust fund in the {string} field in accounts page")
+	public void user_enters_trust_fund_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters {double} in the {string} field in accounts page")
+	public void user_enters_in_the_field_in_accounts_page(Double double1, String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters {int} in the {string} field in accounts page")
+	public void user_enters_in_the_field_in_accounts_page(Integer int1, String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters DiEris in the {string} field in accounts page")
+	public void user_enters_di_eris_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters VenusLander.gov in the {string} field in accounts page")
+	public void user_enters_venus_lander_gov_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User clicks on {string}")
+	public void user_clicks_on(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User should be able to validate account created successfully")
+	public void user_should_be_able_to_validate_account_created_successfully() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	
+
+}

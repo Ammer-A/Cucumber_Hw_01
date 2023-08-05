@@ -1,0 +1,105 @@
+package step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.datatable.CucumberDataTableException;
+import io.cucumber.java.DataTableType;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import pages.NewAccountPage;
+
+public class Add_new_account_Test {
+	WebDriver driver;
+	
+	
+	static String accountType;
+	static String purpose;
+	static String Startbalance;
+	static  String routNum;
+	static String contact;
+	static String contactnum;
+	static String url;
+	NewAccountPage Account;
+
+@DataTableType
+public  Object field(Map<String, String> input) {
+	
+	accountType=input.get("acctname");
+	purpose=input.get("purpose");
+		input.get("balance");
+		input.get("accountNumber");
+		input.get("contactPerson");
+		input.get("Phone");
+		input.get("internetBankingURL");
+		
+		return field(input);
+		
+		
+			
+}
+
+	@Given("a field for new account")
+	public void a_field_for_new_account(io.cucumber.datatable.DataTable field) {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+		List<Map<String, String>> AccountCreation = field.asMaps();
+		for (Map<String, String> AccountField : AccountCreation) {
+	    // For other transformations you can register a DataTableType.
+		}
+	}
+
+	@When("User enters <acctname> in the {string} field in accounts page")
+	public void user_enters_acctname_in_the_field_in_accounts_page(String string) {
+		Account.;
+	}
+
+	@When("User enters <purpose> in the {string} field in accounts page")
+	public void user_enters_purpose_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <balance> in the {string} field in accounts page")
+	public void user_enters_balance_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <accountNumber> in the {string} field in accounts page")
+	public void user_enters_account_number_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <contactPerson> in the {string} field in accounts page")
+	public void user_enters_contact_person_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <Phone> in the {string} field in accounts page")
+	public void user_enters_phone_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <internetBankingURL> in the {string} field in accounts page")
+	public void user_enters_internet_banking_url_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	
+
+}

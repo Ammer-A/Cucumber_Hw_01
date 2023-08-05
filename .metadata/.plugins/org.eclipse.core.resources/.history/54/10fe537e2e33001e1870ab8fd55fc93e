@@ -1,0 +1,62 @@
+package step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.datatable.CucumberDataTableException;
+import io.cucumber.java.DataTableType;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import pages.NewAccountPage;
+
+public class Add_new_account_Test {
+	WebDriver driver;
+	
+	
+
+	@When("User enters <purpose> in the {string} field in accounts page")
+	public void user_enters_purpose_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <balance> in the {string} field in accounts page")
+	public void user_enters_balance_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <accountNumber> in the {string} field in accounts page")
+	public void user_enters_account_number_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <contactPerson> in the {string} field in accounts page")
+	public void user_enters_contact_person_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <Phone> in the {string} field in accounts page")
+	public void user_enters_phone_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User enters <internetBankingURL> in the {string} field in accounts page")
+	public void user_enters_internet_banking_url_in_the_field_in_accounts_page(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+	
+
+}

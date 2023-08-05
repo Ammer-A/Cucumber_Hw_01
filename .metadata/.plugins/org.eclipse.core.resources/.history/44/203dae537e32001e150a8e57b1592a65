@@ -1,0 +1,70 @@
+package step;
+
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.DashboardPage;
+import pages.LoginPage;
+import pages.NewAccountPage;
+import util.BrowserFactory;
+import util.Testbase;
+
+
+public class SetupStep {
+	WebDriver driver;
+	LoginPage PreTestConfig;
+	Testbase commons;
+	DashboardPage Dashboard;
+
+	static String accountType;
+	static String purpose;
+	static String Startbalance;
+	static  String routNum;
+	static String contact;
+	static String contactnum;
+	static String url;
+	NewAccountPage Account;
+	
+	
+	@Given("user is on biling page")
+	
+	public void user_is_on_biling_page() {
+	    driver=BrowserFactory.init();
+		driver.get("https://www.techfios.com/billing/?ng=login/");
+	}
+
+	@When("I login  with my <username> and <password>")
+	public void i_login_with_my_username_and_password() {
+		PreTestConfig=PageFactory.initElements(driver, LoginPage.class);
+	   PreTestConfig.setup("demo@techfios.com", "abc123");
+	}
+
+	@Then("I land on the dashboard page")
+	public void i_land_on_the_dashboard_page() {
+		commons=PageFactory.initElements(driver, Testbase.class);
+commons.valididator("Dashboard- iBilling");
+	}
+
+	@When("user clicks on the new account page")
+	public void user_clicks_on_the_new_account_page() throws InterruptedException {
+	    Dashboard=PageFactory.initElements(driver, DashboardPage.class);
+	    Thread.sleep(2000);
+	    Dashboard.switchTo_NEW_ACCOUNT();
+	}
+	@Then("I land on the new account page")
+	public void i_land_on_the_new_account_page() {
+		commons=PageFactory.initElements(driver, Testbase.class);
+commons.valididator("Accounts- iBilling");	}
+
+		
+	
+	
+
+}

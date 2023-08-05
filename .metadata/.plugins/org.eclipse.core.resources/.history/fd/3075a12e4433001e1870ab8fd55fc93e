@@ -1,0 +1,19 @@
+package util;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.asserts.Assertion;
+
+public class Testbase {
+	WebDriver driver;
+	public Testbase(WebDriver driver) {
+		this.driver = driver;
+		}
+	public boolean valididator(String suppose) {
+		String actual = driver.getTitle();
+		String expect = suppose;
+		Assertion assertion = new Assertion();
+		assertion.assertEquals(actual, expect, "wrong page");
+		return true;
+
+	}
+}

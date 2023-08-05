@@ -1,0 +1,45 @@
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#""" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#""
+## (Comments)
+#Sample Feature Definition Template
+@techfios
+Feature: Add a new account
+
+  I want to add acount using an example table with cucumber step
+  @login
+Scenario:
+Given user is on biling page
+When I login  with my <username> and <password> 
+Then I land on the dashboard page
+
+
+
+
+  @add_new_account
+  Scenario: how to add a new account
+    Given user clicks on the new account page
+    When I enter the account name <name>
+    And I enter the account purpose <purpose>
+    And I enter the starting balance <balance>
+    And I enter the routing number <rout>
+    And I enter contact person<contact>
+    And I enter contact phone number<phonenumber>
+    And I enter refrencence url <url>
+    And I click on save btn
+    Then I verify account creation status
+      | name  | purpose   | balance | rout        | contact | phonenumber | url        |
+      | Venus | TrustFund | 3,50000 | 46754345678 | HQSTORM | 31447965484 | VENUS7.gov |
